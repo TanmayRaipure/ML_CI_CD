@@ -14,5 +14,5 @@ def test_model_training():
     assert os.path.exists("models/model.pkl")
 
 
-    model = joblib.load("models/model/pkl")
+    model = joblib.load("models/model.pkl")
     assert hasattr(model,"predict")
