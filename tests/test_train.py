@@ -1,5 +1,11 @@
 import os
+import sys
 import joblib
+
+
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__),".."))
+sys.path.insert(0, ROOt_DIR)
+
 from src.train import train_model
 
 
@@ -8,5 +14,5 @@ def test_model_training():
     assert os.path.exists("models/model.pkl")
 
 
-    model = joblib.load("model/model/pkl")
+    model = joblib.load("models/model/pkl")
     assert hasattr(model,"predict")
